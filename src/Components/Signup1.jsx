@@ -15,7 +15,7 @@ const SignUpPage = () => {
     };
     try {
       const res = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDK8-gBCjUvMtsxYYRNZrnQavLMv3Slw6w",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCFrmedDfSLLubh6dopFm8w_kt-t0eGWRA",
         obj
       );
       console.log(res);

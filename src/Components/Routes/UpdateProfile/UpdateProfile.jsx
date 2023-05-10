@@ -23,7 +23,7 @@ const UpdateProfile = () => {
       try {
         setLoading(true);
         let res = await axios.post(
-          "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDK8-gBCjUvMtsxYYRNZrnQavLMv3Slw6w",
+          "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCFrmedDfSLLubh6dopFm8w_kt-t0eGWRA",
           {
             idToken: JSON.parse(localStorage.getItem("token")),
             displayName: name,
@@ -54,7 +54,7 @@ const UpdateProfile = () => {
     try {
       setLoading(true);
       let res = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDK8-gBCjUvMtsxYYRNZrnQavLMv3Slw6w",
+        "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyCFrmedDfSLLubh6dopFm8w_kt-t0eGWRA",
         {
           idToken: JSON.parse(localStorage.getItem("token")),
         }
@@ -74,7 +74,7 @@ const UpdateProfile = () => {
     e.preventDefault();
     try {
       let res = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyDK8-gBCjUvMtsxYYRNZrnQavLMv3Slw6w",
+        "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyCFrmedDfSLLubh6dopFm8w_kt-t0eGWRA",
         {
           requestType: "VERIFY_EMAIL",
           idToken: JSON.parse(localStorage.getItem("token")),
@@ -123,14 +123,14 @@ const UpdateProfile = () => {
           value={url}
           onChange={handleUrl}
           type="text"
-          placeholder="Profile Photo URL"
+          placeholder="Profile URL"
         />
         <input onClick={handleSubmit} type="submit" value={"Update"} />
-        {/* <input
+        <input
           onClick={handleConfirmEmail}
           type="submit"
           value={"Confirm Email"}
-        /> */}
+        />
       </form>
       <ToastContainer />
     </>
