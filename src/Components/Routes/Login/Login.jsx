@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { Navigate, useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
 import { UserLogin } from "../../Redux/Auth.actions";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -79,6 +81,7 @@ const Login = () => {
           placeholder="Enter Password"
         />
         <input onClick={handleSubmit} type="submit" value={"Login"} />
+        <Link to={"/ForgotPassword"}>Forgot Password</Link>
       </form>
       <ToastContainer />
     </>
